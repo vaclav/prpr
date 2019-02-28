@@ -7,7 +7,7 @@ public class Hra {
     public static void main(String[] args) {
         final Hrdina h = new Hrdina("Bivoj", 10, 9);
         final Zloduch z1 = new Zloduch("Zombik", new Random().nextInt(4)+1);
-        final Zloduch z2 = new Zloduch("Zombik", 6);
+        final Zloduch z2 = new Zloduch("Upir", 6);
         final Armada armada1 = new Armada("Hrdinska Legie", h, new Hrdina("Premysl", 3, 25));
         final Armada armada2 = new Armada("Zlodusi", z1);
 
