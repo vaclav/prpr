@@ -1,12 +1,11 @@
 package bojovaHra;
 
 public class Zloduch extends Bojovnik {
-
     boolean nazivu = true;
-    public Zloduch(String jmeno, int sila) {
-        super (jmeno, sila);
-    }
 
+    public Zloduch(String jmeno, int sila) {
+        super(jmeno, sila);
+    }
 
     @Override
     public void prohrat() {
