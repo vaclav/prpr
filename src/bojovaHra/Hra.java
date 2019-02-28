@@ -19,4 +19,3 @@ public class Hra {
         System.out.println(z1.nazivu);
     }
 }
-//jalůfjasaůolofjaslůkjfůaslkjfůalsůlůkasjflůkjassoiůjfwoikfkjjsadifjeawlkůujfowikflikifůl-jkewkfloildfjaewfjlkfjoiesjk

@@ -3,7 +3,6 @@ package bojovaHra;
 public class Hrdina extends Bojovnik {
     int zivoty;
 
-
     public Hrdina(String jmeno, int sila, int zivoty) {
         super(jmeno, sila);
         this.zivoty = zivoty;

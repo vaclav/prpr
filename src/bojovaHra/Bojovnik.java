@@ -9,9 +9,7 @@ public abstract class Bojovnik {
     this.sila = sila;
     }
 
-    public void prohrat() {
-
-    }
+    public void prohrat() { }
 
     public abstract boolean jeNazivu();
 }
