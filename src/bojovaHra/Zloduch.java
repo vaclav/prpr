@@ -1,8 +1,7 @@
 package bojovaHra;
 
 public class Zloduch extends Bojovnik {
-    String jmeno;
-    int sila;
+
     boolean nazivu = true;
 
     public Zloduch(String jmeno, int sila) {

@@ -1,8 +1,6 @@
 package bojovaHra;
 
 public class Hrdina extends Bojovnik {
-    String jmeno;
-    int sila;
     int zivoty;
 
     public Hrdina(String jmeno, int sila, int zivoty) {
