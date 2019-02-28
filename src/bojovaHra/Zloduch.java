@@ -3,11 +3,10 @@ package bojovaHra;
 public class Zloduch extends Bojovnik {
 
     boolean nazivu = true;
-
     public Zloduch(String jmeno, int sila) {
-        this.jmeno = jmeno;
-        this.sila = sila;
+        super (jmeno, sila);
     }
+
 
     @Override
     public void prohrat() {

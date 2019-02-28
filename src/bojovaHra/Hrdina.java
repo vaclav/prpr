@@ -3,9 +3,9 @@ package bojovaHra;
 public class Hrdina extends Bojovnik {
     int zivoty;
 
+
     public Hrdina(String jmeno, int sila, int zivoty) {
-        this.jmeno = jmeno;
-        this.sila = sila;
+        super(jmeno, sila);
         this.zivoty = zivoty;
     }
 
