@@ -26,7 +26,7 @@ public class Armada {
     }
 
     public void souboj(Armada tiDruzi) {
-        if (this.sila() > tiDruzi.sila()) {
+        if (this.sila() > tiDruzi.sila()*3) {
             tiDruzi.prohrat();
         } else {
             this.prohrat();
