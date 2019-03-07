@@ -17,12 +17,4 @@ public class Hrdina extends Bojovnik {
     public boolean jeNazivu() {
         return zivoty > 0;
     }
-
-    public void souboj(Zloduch zlo) {
-        if(this.sila > zlo.sila) {
-            zlo.nazivu = false;
-        } else {
-            this.zivoty -= zlo.sila;
-        }
-    }
 }

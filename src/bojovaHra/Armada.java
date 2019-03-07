@@ -9,23 +9,21 @@ public class Armada {
         this.bojovnici = bojovnici;
     }
 
+    public int sila() {
+        return bojovnici.length;
+    }
+
+    public void prohrat() {
+        for (Bojovnik bojovnik : bojovnici) {
+            bojovnik.prohrat();
+        }
+    }
+
     public void souboj(Armada tiDruzi) {
         if (this.sila() > tiDruzi.sila()) {
             tiDruzi.prohrat();
         } else {
             this.prohrat();
         }
-    }
-
-    public int sila() {
-        return bojovnici.length;
-    }
-
-    public void prohrat() {
-        for (int i = 0; i < bojovnici.length; i++) {
-            Bojovnik bojovnik = bojovnici[i];
-            bojovnik.prohrat();
-        }
-
     }
 }

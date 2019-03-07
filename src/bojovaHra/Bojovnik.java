@@ -12,4 +12,12 @@ public abstract class Bojovnik {
     public void prohrat() { }
 
     public abstract boolean jeNazivu();
+
+    public void souboj(Bojovnik protivnik) {
+        if(this.sila > protivnik.sila) {
+            protivnik.prohrat();
+        } else {
+            this.prohrat();
+        }
+    }
 }
