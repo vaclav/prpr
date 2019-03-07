@@ -13,9 +13,7 @@ public class Armada {
         int celkovasila = 0;
         for (Bojovnik bojovnik : bojovnici) {
             celkovasila += bojovnik.sila;
-
-            }
-
+        }
         return celkovasila;
     }
 
