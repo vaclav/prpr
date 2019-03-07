@@ -13,9 +13,7 @@ public class Hra {
         final Armada armada1 = new Armada("Hrdinska Legie", h, new Hrdina("Premysl", 3, 25));
         final Armada armada2 = new Armada("Zlodusi", z1, z2, z3);
 
-        System.out.println(h.jeNazivu());
-        armada1.souboj(armada2);
-        System.out.println(h.jeNazivu());
-        System.out.println(z1.nazivu);
+        System.out.println("Sila armady 1 je " + armada1.sila());
+        System.out.println("Sila armady 2 je " + armada2.sila());
     }
 }

@@ -10,7 +10,13 @@ public class Armada {
     }
 
     public int sila() {
-        return bojovnici.length;
+        int celkovasila = 0;
+        for (Bojovnik bojovnik : bojovnici) {
+            celkovasila += bojovnik.sila;
+
+            }
+
+        return celkovasila;
     }
 
     public void prohrat() {
