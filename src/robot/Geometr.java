@@ -10,8 +10,19 @@ public class Geometr extends Malir {
 
   @Override
   protected void nakresli() {
+    graphics.setColor(Color.green);
+    graphics.fillRect(500,50,100,100);
     graphics.setColor(Color.red);
-    graphics.drawOval(500, 50, 100, 200);
-    graphics.fillRect(100, 150, 100, 200);
+    graphics.drawOval(500, 50, 100, 100);
+    graphics.drawRect(500, 50, 100, 100);
+    graphics.setColor(Color.LIGHT_GRAY);
+    graphics.fillRect(100, 150, 100, 100);
+
+    graphics.setColor(Color.green);
+    graphics.fillOval(100, 150, 100, 100);
+    graphics.fillOval(500,50,100,100);
+
+
+
   }
 }
