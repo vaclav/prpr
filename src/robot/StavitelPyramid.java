@@ -9,9 +9,10 @@ public class StavitelPyramid extends Malir {
   }
   @Override
   protected void nakresli() {
-graphics.drawLine(300,300,450,500);
-graphics.drawLine(300,300,150,500);
-graphics.drawLine(450,500,150,500);
+
+    graphics.drawLine(300,300,450,500);
+    graphics.drawLine(300,300,150,500);
+    graphics.drawLine(450,500,150,500);
   }
 
 
