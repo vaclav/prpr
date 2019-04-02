@@ -16,6 +16,10 @@ public class Kresleni extends JFrame {
     g.nakresli();
     s.nakresli();
     f.nakresli();
+
+    new Kruzitko(platno, 600, 400, 50, true).nakresli();
+    new Kruzitko(platno, 660, 400, 50, false).nakresli();
+    new Kruzitko(platno, 720, 400, 50, true).nakresli();
   }
 
   public static void main(String[] args) throws InvocationTargetException, InterruptedException {
