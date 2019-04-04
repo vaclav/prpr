@@ -6,8 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Kresleni extends JFrame {
+
+  private static AtomicInteger velikost = new AtomicInteger(100);
 
   private void namaluj(Graphics platno) {
     final Malir g = new Geometr(platno);
@@ -20,6 +23,7 @@ public class Kresleni extends JFrame {
     new Kruzitko(platno, 600, 400, 50, true).nakresli();
     new Kruzitko(platno, 660, 400, 50, false).nakresli();
     new Kruzitko(platno, 720, 400, 50, true).nakresli();
+    new Kruzitko(platno, platno.getClipBounds().width/2, platno.getClipBounds().height/2, velikost.get(), false).nakresli();
   }
 
   public static void main(String[] args) throws InvocationTargetException, InterruptedException {
@@ -58,5 +62,15 @@ public class Kresleni extends JFrame {
     kresleni.getContentPane().add(cudlik,BorderLayout.NORTH);
     kresleni.setVisible(true);
     kresleni.pack();
+
+    Timer animator = new Timer(100, new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        velikost.incrementAndGet();
+        platno.repaint();
+      }
+    });
+    animator.start();
+
   }
 }
