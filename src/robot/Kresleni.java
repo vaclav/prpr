@@ -20,9 +20,9 @@ public class Kresleni extends JFrame {
     s.nakresli();
     f.nakresli();
 
-    new Kruzitko(platno, 600, 400, velikost.get(), false).nakresli();
+    new Kruzitko(platno, 600, 400, velikost.get(), true).nakresli();
     new Kruzitko(platno, 660, 400, velikost.get(), false).nakresli();
-    new Kruzitko(platno, 720, 400, velikost.get(),false).nakresli();
+    new Kruzitko(platno, 720, 400, velikost.get(),true).nakresli();
     new Kruzitko(platno, platno.getClipBounds().width/2, platno.getClipBounds().height/2, velikost.get(), false).nakresli();
 
   }
