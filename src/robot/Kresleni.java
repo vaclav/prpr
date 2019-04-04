@@ -24,6 +24,7 @@ public class Kresleni extends JFrame {
     new Kruzitko(platno, 660, 400, 50, false).nakresli();
     new Kruzitko(platno, 720, 400, 50, true).nakresli();
     new Kruzitko(platno, platno.getClipBounds().width/2, platno.getClipBounds().height/2, velikost.get(), false).nakresli();
+
   }
 
   public static void main(String[] args) throws InvocationTargetException, InterruptedException {
@@ -62,12 +63,12 @@ public class Kresleni extends JFrame {
     kresleni.getContentPane().add(cudlik,BorderLayout.NORTH);
     kresleni.setVisible(true);
     kresleni.pack();
-
     Timer animator = new Timer(100, new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         velikost.incrementAndGet();
-        platno.repaint();
+        kresleni.invalidate();
+        kresleni.repaint();
       }
     });
     animator.start();
