@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Kresleni extends JFrame {
 
-  private static AtomicInteger velikost = new AtomicInteger(100);
+  private static AtomicInteger velikost = new AtomicInteger(10);
 
   private void namaluj(Graphics platno) {
     final Malir g = new Geometr(platno);
@@ -20,11 +20,19 @@ public class Kresleni extends JFrame {
     s.nakresli();
     f.nakresli();
 
+
     new Kruzitko(platno, 600, 400, velikost.get(), true).nakresli();
     new Kruzitko(platno, 660, 400, velikost.get(), false).nakresli();
     new Kruzitko(platno, 720, 400, velikost.get(),true).nakresli();
-    new Kruzitko(platno, platno.getClipBounds().width/2, platno.getClipBounds().height/2, velikost.get(), false).nakresli();
+    //new Kruzitko(platno, platno.getClipBounds().width/2, platno.getClipBounds().height/2, velikost.get(), false).nakresli();
 
+    final int v = new Random().nextInt(10) + velikost.get();
+    platno.setColor(Color.black);
+
+//    platno.setFont(platno.getFont().deriveFont(40.0f).deriveFont(Font.ITALIC));
+
+    platno.setFont(new Font("Savoye LET", Font.BOLD|Font.ITALIC, v));
+    platno.drawString("Tanky s plamenometem jsou nej!", platno.getClipBounds().width/2, platno.getClipBounds().height/2 - 200);
   }
 
   public static void main(String[] args) throws InvocationTargetException, InterruptedException {
@@ -66,7 +74,10 @@ public class Kresleni extends JFrame {
     Timer animator = new Timer(100, new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        velikost.incrementAndGet();
+        final int v = velikost.incrementAndGet();
+        if (v > 200) {
+          velikost.set(10);
+        }
         kresleni.invalidate();
         kresleni.repaint();
       }
