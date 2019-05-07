@@ -1,6 +1,11 @@
 package auticka;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
+import java.io.File;
+import java.io.IOException;
 
 public class SlapaciKolo extends Vozidlo implements Animacek {
 
@@ -31,5 +36,17 @@ public class SlapaciKolo extends Vozidlo implements Animacek {
     platno.drawLine(stredPrednihoKolaX, stredPrednihoKolaY, stredPrednihoKolaX + 20, stredPrednihoKolaY - 30);
     platno.drawLine(stredZadnihoKolaX, stredZadnihoKolaY, stredZadnihoKolaX - 40, stredZadnihoKolaY);
     super.nakresliSe(platno, x, y);
+
+    try {
+      final BufferedImage image = ImageIO.read(new File("src/auticka/ideal-funcore-m-bicycle.jpg"));
+      platno.drawImage(image, x + 100, y, 50, 32, new ImageObserver() {
+        @Override
+        public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
+          return false;
+        }
+      });
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 }

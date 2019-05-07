@@ -2,7 +2,7 @@ package auticka;
 
 import java.awt.*;
 
-public abstract class Vozidlo implements Animacek{
+public abstract class Vozidlo implements Animacek {
   int pocetKol;
   int maximalniRychlost;
   Pohon druhPohonu;
