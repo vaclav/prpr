@@ -47,9 +47,14 @@ public class Autodrom extends JFrame {
       }
     });
     autodrom.getContentPane().add(tlacitkoKonec, BorderLayout.SOUTH);
+
+    final JTextArea area = new JTextArea();
+    area.setColumns(100);
+    final JScrollPane scrollPanel = new JScrollPane(area);
+    autodrom.add(scrollPanel, BorderLayout.EAST);
     autodrom.setVisible(true);
     autodrom.pack();
-
+    new Spion().naslouchej(area);
   }
 
 }
