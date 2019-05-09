@@ -17,6 +17,7 @@ public class Autodrom extends JFrame {
   public Autodrom() {
     animacci.add(new SlapaciKolo(Color.red));
     animacci.add(new SlapaciKolo(Color.blue));
+    animacci.add(new Tank(Color.black));
     animacci.add(new Brusle());
   }
 
