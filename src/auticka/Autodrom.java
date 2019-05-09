@@ -15,6 +15,7 @@ public class Autodrom extends JFrame {
   public Autodrom() {
     animacci.add(new SlapaciKolo(Color.red));
     animacci.add(new SlapaciKolo(Color.blue));
+    animacci.add(new Brusle());
   }
 
   private void namaluj(Graphics platno) {
