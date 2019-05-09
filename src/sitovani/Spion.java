@@ -1,13 +1,11 @@
-package auticka;
+package sitovani;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
-import java.util.Random;
 
 public class Spion {
 

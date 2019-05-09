@@ -1,4 +1,4 @@
-package auticka;
+package sitovani;
 
 import java.io.IOException;
 import java.net.*;

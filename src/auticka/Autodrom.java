@@ -1,5 +1,7 @@
 package auticka;
 
+import sitovani.Spion;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
