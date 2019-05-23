@@ -14,6 +14,7 @@ public class Palindrom extends JFrame {
   final JButton tlacitko = new JButton("Testuj");
 
   private void pripravitOkno() {
+    getRootPane().setDefaultButton(tlacitko);
     final JPanel panel = new JPanel();
     panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
     panel.add(new JLabel("Slovo:"));
