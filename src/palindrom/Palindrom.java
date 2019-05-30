@@ -34,11 +34,21 @@ public class Palindrom extends JFrame {
 
   private void otestujPalindrom() {
     if(spravneZadani()) {
-      final String text = poleProZadaniSlova.getText().trim();
+      final String syrovyText = poleProZadaniSlova.getText().trim();
+      int index = 0;
+      String text = "";
+      while (index < syrovyText.length()) {
+        if (syrovyText.charAt(index) != ' ') {
+          text += syrovyText.charAt(index);
+        }
+        index+=1;
+      }
+
+
       if (jePalindrom(text)) {
-        ukazVysledek(text + " není palindrom! Obráceně je to totiž: " + otoc(text));
-      } else {
         ukazVysledek(text + " je palindrom!");
+      } else {
+        ukazVysledek(text + " není palindrom! Obráceně je to totiž: " + otoc(syrovyText));
       }
     }
   }
@@ -55,10 +65,10 @@ public class Palindrom extends JFrame {
   }
 
   private boolean jePalindrom(String text) {
-    final int delka = text.length()-1;
+    final int pozicePoslednihoPismene = text.length()-1;
     int index = 0;
-    while(index<delka) {
-      if(text.charAt(index) != text.charAt(delka-index)) {
+    while(index<pozicePoslednihoPismene-index) {
+      if(text.charAt(index) != text.charAt(pozicePoslednihoPismene-index)) {
         return false;
       }
       index+=1;
