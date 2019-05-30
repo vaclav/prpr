@@ -21,19 +21,19 @@ public class Ovladac extends KeyAdapter {
     switch (keyCode) {
       case VK_UP:
         mojePostava.setY(mojePostava.getY() - krok);
-        mojePostava.setAktualniSmer(Smery.NAHORU);
-        break;
-      case VK_DOWN:
-        mojePostava.setY(mojePostava.getY() + krok);
         mojePostava.setAktualniSmer(Smery.DOLU);
         break;
+      case VK_DOWN:
+        mojePostava.setY(mojePostava.getY() - krok);
+        mojePostava.setAktualniSmer(Smery.NAHORU);
+        break;
       case VK_LEFT:
-        mojePostava.setX(mojePostava.getX() - krok);
-        mojePostava.setAktualniSmer(Smery.DOLEVA);
+        mojePostava.setX(mojePostava.getX() + krok);
+        mojePostava.setAktualniSmer(Smery.DOPRAVA);
         break;
       case VK_RIGHT:
         mojePostava.setX(mojePostava.getX() + krok);
-        mojePostava.setAktualniSmer(Smery.DOPRAVA);
+        mojePostava.setAktualniSmer(Smery.DOLEVA);
         break;
     }
     hra.repaint();
