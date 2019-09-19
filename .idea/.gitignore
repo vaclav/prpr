@@ -1,0 +1,10 @@
+# Default ignored files
+/workspace.xml
+*.jar
+*.class
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
